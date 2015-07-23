@@ -1,0 +1,19 @@
+<h1>Expenses#new</h1>
+<p>Find me in app/views/expenses/new.html.erb</p>
+<%= form_for @expense_form, url: {action: "create"} do |f| %>
+
+<p>
+  <%= f.label :user %><br />
+  <%= f.text_field :user_id %>
+</p>
+<p>
+  <%= f.label :outlay_type %><br />
+  <%= f.text_field :outlay_type_id %>
+</p>
+<p>
+  <%= f.label :description %><br />
+  <%= f.text_field :description %>
+</p>
+
+<p><%= f.submit "Submit" %></p>
+<% end %>

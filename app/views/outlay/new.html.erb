@@ -1,0 +1,13 @@
+<%= form_for @outlay_form, url: {action: "create"} do |f| %>
+
+    <p>
+      <%= f.label :user %><br />
+      <%= f.text_field :user_id %>
+    </p>
+    <p>
+      <%= f.label :outlay_type %><br />
+      <%= f.text_field :outlay_type %>
+    </p>
+
+    <p><%= f.submit "Submit" %></p>
+<% end %>
