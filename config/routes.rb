@@ -1,9 +1,23 @@
 Rails.application.routes.draw do
+
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root 'users#index'
 
   get "users/index"
+
+  get "outlay/new"
+
+  post "outlay/create"
+
+  post 'expenses/create'
+
+  get 'expenses/new'
+
+  get 'expenses/show'
+
+  get 'expenses/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
